@@ -4,19 +4,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class User {
+public class Player {
 
-    String name;
+    int playerNumber;
 
     Map<Integer, List<Integer>> scoresOnRound;
 
-    public User(String name, String email) {
-        this.name = name;
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    public void setTotalScore(int totalScore) {
+        this.totalScore = totalScore;
+    }
+
+    int totalScore;
+
+    public Player(int number) {
+        this.playerNumber = number;
         scoresOnRound = new HashMap<>();
     }
 
-    public String getName() {
-        return name;
+    public Integer getName() {
+        return playerNumber;
     }
 
 

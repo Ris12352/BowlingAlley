@@ -1,6 +1,6 @@
 package com.company.models;
 
-public class Pins {
+public class ScoreBoard {
 
 
 }
