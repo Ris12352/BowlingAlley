@@ -9,13 +9,13 @@ public class BowlingService {
 
     static Map<Integer, Round> rounds;
 
-    static Map<Integer, Map<Integer, Round>> userScores;
+    static Map<Integer, Map<Integer, Integer>> userScores;
 
     Queue<Integer> players;
 
     public BowlingService() {
         rounds = new HashMap<Integer, Round>();
-        userScores = new HashMap<Integer, Map<Integer, Round>>();
+        userScores = new HashMap<Integer, Map<Integer, Integer>>();
     }
 
     public void chooseWinner() {
@@ -67,6 +67,11 @@ public class BowlingService {
         for(Map.Entry<Integer, List<Integer>> entry : round.getUserPoints().entrySet()) {
             if(entry.getKey() == playerNumber) {
                 List<Integer> scores = entry.getValue();
+                if(scores == null) {
+                    scores = new ArrayList<>();
+                }
+                scores.add(score1);
+                scores.add(score2);
             }
         }
     }
