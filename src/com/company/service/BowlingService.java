@@ -3,10 +3,7 @@ package com.company.service;
 import com.company.enums.Bonus;
 import com.company.models.Round;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 public class BowlingService {
 
@@ -66,5 +63,11 @@ public class BowlingService {
             round = new Round(roundNumber);
         }
 
+
+        for(Map.Entry<Integer, List<Integer>> entry : round.getUserPoints().entrySet()) {
+            if(entry.getKey() == playerNumber) {
+                List<Integer> scores = entry.getValue();
+            }
+        }
     }
 }

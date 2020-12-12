@@ -10,6 +10,8 @@ public class Round {
 
     Map<Integer, List<Integer>> userPoints;
 
+    private ScoreBoard scoreBoard;
+
     public Map<Integer, List<Integer>> getUserPoints() {
         return userPoints;
     }
@@ -21,8 +23,6 @@ public class Round {
     public int getRoundNumber() {
         return roundNumber;
     }
-
-    private ScoreBoard scoreBoard;
 
     public Round(int roundNumber) {
         this.roundNumber = roundNumber;
