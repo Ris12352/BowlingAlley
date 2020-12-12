@@ -8,13 +8,13 @@ public class Round {
 
     private int roundNumber;
 
-    Map<String, List<Integer>> userPoints;
+    Map<Integer, List<Integer>> userPoints;
 
-    public Map<String, List<Integer>> getUserPoints() {
+    public Map<Integer, List<Integer>> getUserPoints() {
         return userPoints;
     }
 
-    public void setUserPoints(Map<String, List<Integer>> userPoints) {
+    public void setUserPoints(Map<Integer, List<Integer>> userPoints) {
         this.userPoints = userPoints;
     }
 
@@ -26,7 +26,7 @@ public class Round {
 
     public Round(int roundNumber) {
         this.roundNumber = roundNumber;
-        this.userPoints = new HashMap<String, List<Integer>>();
+        this.userPoints = new HashMap<Integer, List<Integer>>();
     }
 
 }

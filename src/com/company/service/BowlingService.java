@@ -12,13 +12,13 @@ public class BowlingService {
 
     static Map<Integer, Round> rounds;
 
-    static Map<String, Map<Integer, Round>> userScores;
+    static Map<Integer, Map<Integer, Round>> userScores;
 
     Queue<Integer> players;
 
     public BowlingService() {
         rounds = new HashMap<Integer, Round>();
-        userScores = new HashMap<String, Map<Integer, Round>>();
+        userScores = new HashMap<Integer, Map<Integer, Round>>();
     }
 
     public void chooseWinner() {
